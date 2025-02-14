@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C&C Krishna</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #212121;
+          color: aliceblue;
+        }
+      </style>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // Try Adding More List Items 
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerText = `${langName}` // For every new language, add a new list item the entire list tree is getting traverse as to add the element at last this is not efficient for list size more than 100
+
+        // const list = document.querySelector('.language');
+        // list.appendChild(li);
+
+        document.querySelector('.language').appendChild(li); 
+    }
+
+    // addLanguage("Python")
+    // addLanguage("C++")
+
+    // For larger Scale more optimise addLanguage Function
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+
+        // const addText = document.createTextNode(langName)
+        // li.appendChild(addText);
+
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addOptiLanguage("Python")
+    addOptiLanguage("C++")
+
+
+    //Edit Preexisting List Item or any Values
+    // Editing Python text
+    // Method 1
+    const secondLang = document.querySelector("li:nth-child(2)")
+    let newli = document.createElement('li')
+    newli.textContent = "Krishna"
+    secondLang.replaceWith(newli); // the methods that it has
+
+
+    // Method 2
+    const flang = document.querySelector('li:first-child')
+    flang.outerHTML = '<li>Manit</li>'
+
+
+    // Removing last Element
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove() // remove() is a method of the element object that removes the element from
+    
+</script>
+</html>

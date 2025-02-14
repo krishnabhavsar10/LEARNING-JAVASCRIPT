@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Krishna Bhavsar</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+
+    // Handler is basically a function with no name
+
+    // setTimeout function basically is used to run a function after a specified time period in milliseconds only once
+    // setTimeout(function(){    
+    //     console.log('Krishna Done by setTimeout'); // This will be executed after 2 seconds of the page load see console
+    // }, 2000) // 2000 ms = 2 seconds
+
+    // const sayKrishna = () => {
+    //     console.log('Krishna Done by setTimeout');
+    //     document.querySelector('h1').innerHTML = "Best Javascript Developer";
+    // }
+
+    // const setTimeoutRef = setTimeout(sayKrishna, 2000) // Passing a function as an argument as reference
+
+    // Now how to stop the setTimeout function
+    // clearTimeout(setTimeoutRef); But doing this is pointless as the setTimeout function is only executed once
+
+    // Hence we have to add a event listener to the stop button
+    // Creating a Event Using the Stop Button Once the button is clicked it will stop the setTimeout function
+
+    // Now we have to add a event listener to the stop button
+    // document.querySelector('#stop').addEventListener('click', function(e){
+    //     console.log("Stopped")
+    //     clearTimeout(setTimeoutRef);
+    // }, false);
+    // Once the button is clicked it will stop the setTimeout function using the clearTimeout function
+
+
+    //-------------------------------------------------
+
+    // setInterval function basically is used to run a function after a specified time period in milliseconds repeatedly
+    // setInterval(function(){    
+    //     console.log('Krishna Done by setInterval'); // This will be executed after 2 seconds of the page load see console
+    // }, 2000) // 2000 ms = 2 seconds
+
+  </script>
+</html>

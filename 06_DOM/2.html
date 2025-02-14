@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent);  
+    //  console.log(parent.children); // Returns a HTML Collection
+    //  console.log(parent.children[0].innerHTML);
+
+    // for(let i = 0 ; i < parent.children.length ; i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+
+    //parent.children[1].style.color = 'orange'
+
+    //console.log(parent.firstElementChild); // Returns the first child element aka the first div viz Monday
+    
+    //console.log(parent.lastElementChild);
+
+    // Changing color of 1st day
+    // const dayOne = document.querySelector('.day')
+    // console.log(dayOne.setAttribute('style','color:orange'))
+
+    // Changing color of All days
+    // const dayAll = document.querySelectorAll('.day')
+    // dayAll.forEach((items)=>{
+    //     items.setAttribute('style', 'color:orange')
+    // })
+
+    // Baap Way to change all the color 
+    // const dayOne = document.querySelector('.day')
+    // console.log(dayOne.parentElement.setAttribute('style', 'color:orange'));
+    
+
+    // const dayOne = document.querySelector('.day')
+    // console.log(dayOne.nextElementSibling);  // Tues
+    // console.log(dayOne.previousElementSibling); // null as monday is the first child
+    
+
+    console.log("Nodes: ", parent.childNodes) // This will return a NodeList which includes all the child nodes including text nodes the line breaks and the divs every thing is stored in a tree like structure in the DOM 
+    
+
+</script>
+
+</html>

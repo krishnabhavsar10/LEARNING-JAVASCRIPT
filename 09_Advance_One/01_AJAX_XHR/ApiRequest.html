@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bb1">
+    <h1>SEE</h1>
+    <ul>
+    <li><h2>XMLHttprequest on MDN</h2></li>
+    <li><h2>AJAX on MDN</h2></li>
+    </ul>
+</body>
+<script>
+    // const xhr = new XMLHttpRequest();
+    // xhr.open('GET','Test.json');
+    // xhr.onreadystatechange = function(){
+    //     console.log(xhr.readyState); 
+    // }
+    // xhr.send();
+
+    //---------------------------------------------------
+
+    // const xhr = new XMLHttpRequest();
+    // xhr.open('GET','Test.json');
+    // xhr.onreadystatechange = function(){
+    //     console.log(xhr.readyState); 
+    //     if(xhr.readyState === 4){
+    //         // console.log(this.responseText);
+    //         // const data = this.responseText;
+    //         // console.log(typeof data);
+
+    //         const data = JSON.parse(this.responseText);
+    //         // console.log(data)
+    //         // console.log(data["login"])
+    //         // console.log(data.login)
+
+
+
+    //     }
+    // }
+    // xhr.send();
+
+    //---------------------------------------------------
+
+    const body = document.querySelector('#bb1');
+
+    const button = document.createElement('button');
+    button.id = "myButton"
+    button.innerText = "Call Data"
+    body.append(button)
+
+    const img_tag = document.createElement('img');
+
+    const par_tag = document.createElement('p')
+    par_tag.id = "para"
+    body.append(par_tag);
+
+    button.addEventListener('click', getDate);
+
+    function getDate(){
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET','Test.json');
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4){
+                const data = JSON.parse(this.responseText);
+                const img_url = data["avatar_url"];
+                const followers = data["followers"];
+
+                img_tag.src = img_url;
+                par_tag.innerHTML = `<b>Followers: </b> ${followers}`;
+
+                body.append(img_tag);         
+                
+            }
+        }
+        xhr.send();
+    }
+
+</script>
+</html>

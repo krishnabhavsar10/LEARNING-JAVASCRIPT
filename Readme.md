@@ -47,6 +47,10 @@ Welcome to my **JavaScript, Node.js, and Express** learning repository! 🚀 Thi
 ## 📌 Project: Stock Data Fetcher (REST API)
 This project fetches real-time stock market data from **Alpha Vantage API** and exposes RESTful endpoints to retrieve stock prices.
 
+## 🚀 Current State
+- Authentication & Authorization Done using JWT
+- Database Integration (MySQL)
+  
 ### 🛠️ Tech Stack
 - **Backend:** Node.js, Express.js
 - **API Provider:** Alpha Vantage
@@ -72,8 +76,6 @@ This project fetches real-time stock market data from **Alpha Vantage API** and 
 - ...
 
 ## 🚀 Future Enhancements
-- Authentication & Authorization
-- Database Integration (MongoDB / PostgreSQL)
 - Full-Stack Implementation with Frontend UI
 
 ---
